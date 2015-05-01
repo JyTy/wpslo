@@ -7,7 +7,10 @@ get_header();
 
 <div class="container" role="main">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-2 col-md-push-10">
+            <?php get_sidebar('plugins'); ?>
+        </div>
+        <div class="col-md-10 col-md-pull-2">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                 <div class="page-header">   
@@ -66,9 +69,6 @@ get_header();
             <?php
                 } // End foreach
             ?>
-        </div>
-        <div class="col-md-2">
-            <?php get_sidebar('plugins'); ?>
         </div>
     </div> <!-- END row -->
 </div> <!-- END container -->

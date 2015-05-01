@@ -20,3 +20,20 @@ $brightGrey: #E9F0EA;
 body {
     background-color: $white;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+// PLUGIN LIST (in SIDEBAR)
+ul.plg-cat-list {
+
+    li {
+        display: inline-block;
+
+        @media (min-width: 992px) {
+            display: list-item;
+        }
+    }
+}
