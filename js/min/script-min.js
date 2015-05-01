@@ -1,1 +1,1 @@
-jQuery(document).ready(function($){});
+function responsiveFlow(){var e=jQuery(window).width(),o=jQuery(window).height();e>0&&768>=e?jQuery("body").addClass("mobileView").removeClass("tabView").removeClass("desktopView"):e>768&&992>=e?jQuery("body").addClass("tabView").removeClass("desktopView").removeClass("mobileView"):jQuery("body").addClass("desktopView").removeClass("tabView").removeClass("mobileView")}jQuery(document).ready(function($){responsiveFlow(),$(window).on("resize",function(){responsiveFlow()})});
