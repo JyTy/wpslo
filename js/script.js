@@ -30,7 +30,7 @@ function responsiveFlow() {
 
 (function($) {
    $(window).load(function() {
-     $(".stickyBar").stick_in_parent({parent: $(".container")});
+     $(".desktopView .stickyBar").stick_in_parent({parent: $(".container")});
 
      $('.sidebar')
     .on('sticky_kit:bottom', function(e) {
