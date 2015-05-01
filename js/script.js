@@ -1,17 +1,16 @@
-jQuery(document).ready(function($) {
-    
-    // set body classes based on viewport
-    responsiveFlow();
-    $(window).on('resize', function(){
-        responsiveFlow();
-    });
+jQuery(document).ready(function($) {  
 
     // Animate to plugin cat
     $('.plg-cat-list a').click(function(){
         $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
+            scrollTop: $( $.attr(this, 'href') ).offset().top - 25
         }, 500);
         return false;
+    });
+
+    // On window resize
+    $(window).on('resize', function(){
+        responsiveFlow();
     });
 });
 
@@ -42,5 +41,8 @@ function responsiveFlow() {
         .on('sticky_kit:unbottom', function(e) {
             $(this).parent().css('position', 'relative');
         })
+
+        // set body classes based on viewport
+        responsiveFlow();
    });
 })(jQuery);
