@@ -12,6 +12,21 @@ function pvz_theme_js() {
 }
 add_action( 'wp_enqueue_scripts', 'pvz_theme_js' );
 
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
+
+// Add nav support
+add_theme_support( 'menus' );
+
+function register_wpslo_menus() {
+    register_nav_menus(
+        array(
+            'main-menu'     => __( 'Glavni Menu' )
+        )
+    );
+}
+add_action( 'init', 'register_wpslo_menus' );
+
 
 
 // get Excerpt from given content
