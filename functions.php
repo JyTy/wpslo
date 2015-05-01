@@ -41,3 +41,10 @@ function get_excerpt($content, $chars){
     $excerpt = $excerpt.'...';
     return $excerpt;
 }
+
+// Dump array
+function pr($array) {
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
+}
