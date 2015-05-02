@@ -17,6 +17,7 @@
     </head>
 
     <body <?php body_class(); ?>>
+        <div class="page-wrap">
 
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -48,3 +49,4 @@
                     ?>
             </div>
         </nav>
+

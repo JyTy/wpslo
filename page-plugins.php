@@ -6,13 +6,14 @@ get_header();
 ?>
 
 <div class="container" role="main">
+    <a href="#" class="scroll-top visible-xs-block"><span class="glyphicon glyphicon-chevron-up"></span></a>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <div class="page-header">   
             <h1><?php the_title(); ?></h1>
-        </div>
 
-        <?php the_content();?>
+            <?php the_content();?>
+        </div>
 
     <?php endwhile; else: ?>
         <div class="page-header">   
@@ -20,12 +21,13 @@ get_header();
         </div>
         <p>We could not find this page!!!</p>
     <?php endif; ?>
-    
+
     <div class="row">
-        <div class="col-md-2 col-md-push-10">
-            <?php get_sidebar('plugins'); ?>
+        <div class="col-md-2 show-mobile">
+            <?php get_sidebar('pluginsmobile'); ?>
         </div>
-        <div class="col-md-10 col-md-pull-2">
+
+        <div class="col-md-10">
             <!-- List plugins -->
             <?php
                 // Get all non-empty taxonomies
@@ -41,9 +43,11 @@ get_header();
                 foreach ($taxonomies as $taxonomy) {
                     // Print taxonomy name and desc
             ?>
-                    <div id="<?=$taxonomy->slug?>">
-                        <h2><?=$taxonomy->name?></h2>
-                        <?=$taxonomy->description?>
+                    <div id="<?=$taxonomy->slug?>" class="plugin-grp">
+                        <div class="grp-desc">
+                            <h2><?=$taxonomy->name?></h2>
+                            <?=$taxonomy->description?>
+                        </div>
             <?php
                         // Get the plugins
                         $args = array(
@@ -87,6 +91,9 @@ get_header();
             <?php
                 } // End foreach
             ?>
+        </div>
+        <div class="col-md-2 hide-mobile">
+            <?php get_sidebar('plugins'); ?>
         </div>
     </div> <!-- END row -->
 </div> <!-- END container -->

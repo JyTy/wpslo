@@ -31,6 +31,11 @@ h1, h2, h3, h4, h5 {
     font-weight: 400;
 }
 
+h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -47,6 +52,46 @@ a:active {
 
 a:focus {
     outline: none;
+}
+
+// LAYOUT FLOW
+.show-mobile {
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+.hide-mobile {
+    display: none; 
+
+    @media (min-width: 992px) {
+        display: block;
+    }
+}
+
+// STICKY FOOTER
+html, body {
+    height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -30px; 
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.site-footer, .page-wrap:after {
+    height: 30px; 
+}
+
+footer {
+    font-size: 12px;
+    padding-top: 8px;
 }
 
 // MAIN NAVBAR
@@ -83,6 +128,10 @@ a:focus {
 }
 
 // PLUGIN LIST (in SIDEBAR)
+.sidebar {
+    display: block;
+}
+
 ul.plg-cat-list {
 
     li {
@@ -90,11 +139,49 @@ ul.plg-cat-list {
 
         @media (min-width: 992px) {
             display: list-item;
+            list-style: none;
+        }
+    }
+
+    a {
+        color: $white;
+        padding: 6px 16px;
+        background-color: $orange;
+        display: block;
+        margin-bottom: 4px;
+        transition: background-color 0.3s ease 0s;
+        text-decoration: none;
+
+        &:hover {
+            background-color: darken($orange, 20%);
         }
     }
 }
 
-.plugin {
+// PLUGIN LIST (Main)
+a.scroll-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 100px;
+    background-color: $orange;
+    color: $white;
+    padding: 1px 4px 1px 5px;
+    z-index: 99;
+}
+
+.plugin-grp {
+
+    .grp-desc {
+        margin-bottom: 25px;
+    }
+}
+
+.plugin-list {
+    margin-bottom: 50px;
+}
+
+a.plugin {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
@@ -102,6 +189,7 @@ ul.plg-cat-list {
     display: block;
     color: $white;
     margin-bottom: 15px;
+    text-decoration: none;
 
     &:hover {
         color: $white;
