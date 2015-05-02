@@ -10,14 +10,111 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: orange, flat, wordpress, plugins, blog
 */
 body {
-  background-color: #F9F9F9; }
+  background-color: #FFF;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #010001; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; }
 
 ul {
   margin: 0;
   padding: 0; }
+
+/* za odmaknit doted borderje v brskalnikih */
+a {
+  outline: none; }
+
+a:active {
+  outline: none; }
+
+a:focus {
+  outline: none; }
+
+.navbar-brand {
+  min-height: 73px;
+  padding: 10px 0 10px 15px; }
+
+.navbar-default {
+  background-color: #FFF;
+  box-shadow: 0 0 2px #ccc;
+  border-top: 6px solid #010001;
+  border-radius: 0; }
+
+.navbar-toggle {
+  margin-top: 19px; }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 26px;
+    padding-bottom: 28px; } }
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    background-color: transparent;
+    margin: -6px 0 -2px;
+    border-bottom: 1px solid #F05A28;
+    border-top: 6px solid #F05A28; } }
 
 ul.plg-cat-list li {
   display: inline-block; }
   @media (min-width: 992px) {
     ul.plg-cat-list li {
       display: list-item; } }
+
+.plugin {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: block;
+  color: #F9F9F9;
+  margin-bottom: 15px; }
+  .plugin:hover {
+    color: #F9F9F9;
+    text-decoration: none; }
+    @media (min-width: 768px) {
+      .plugin:hover .content-wrap {
+        top: -140px; }
+      .plugin:hover .plugin-wrap {
+        background-color: #F05A28; } }
+  @media (min-width: 480px) {
+    .plugin {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 768px) {
+    .plugin {
+      width: 33.3333%;
+      margin-bottom: 30px; } }
+  @media (min-width: 1200px) {
+    .plugin {
+      width: 25%; } }
+  .plugin .content-wrap {
+    position: relative;
+    top: 0;
+    transition: all 0.3s ease 0s; }
+  .plugin .plugin-wrap {
+    padding: 10px 30px 10px 10px;
+    background-color: #343330;
+    transition: all 0.3s ease 0s;
+    height: 140px;
+    overflow: hidden; }
+  .plugin .title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    position: relative;
+    height: 120px;
+    margin-bottom: 10px; }
+  .plugin .desc {
+    padding-top: 10px;
+    font-size: 12px; }
+  .plugin .feat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 8px;
+    background-color: #F05A28;
+    padding: 1px 2px 2px;
+    text-transform: uppercase; }

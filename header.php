@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                        <?php bloginfo('name'); ?>
+                        <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Park vojaške zgodovine" width="200" height="52">
                     </a>
                 </div>
 

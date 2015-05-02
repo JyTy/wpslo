@@ -19,11 +19,30 @@
                 );
                 $query = new WP_Query( $args );
             ?>
-                <!-- the loop -->
-                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                    <div class="title"><?php the_title(); ?></div>
-                <?php endwhile; ?>
-                <!-- end of the loop -->
+                <div class="plugin-list">
+                    <div class="row">
+                        <!-- the loop -->
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                            <?php $term = get_field('plugintax'); ?>
+                            <a href="<?php the_field('url') ?>" target="_blank" class="plugin">
+                                <div class="plugin-wrap">
+                                    <div class="content-wrap">
+                                        <div class="title">
+                                            <?php the_title(); ?>
+                                            <?php if( get_field('feat') ) { ?>
+                                                <div class="feat"><?php echo $term->name; ?></div>
+                                            <?php } ?>
+                                        </div>
+                                        <div class="desc">
+                                            <?php the_field('opis') ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php endwhile; ?>
+                        <!-- end of the loop -->
+                    </div>
+                </div>
         </div>
     </div>
 </div> <!-- END container -->

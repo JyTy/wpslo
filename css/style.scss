@@ -14,16 +14,72 @@ $orange: #F05A28;
 $black: #010001;
 $red: #8F0500;
 $white: #F9F9F9;
-$brightGrey: #E9F0EA;
+$brightGrey: #EFF2F2;
+$bckColor: #FFF;
+$boxBckDark: #343330;
 
 // CSS
 body {
-    background-color: $white;
+    background-color: $bckColor;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: $black;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 ul {
     margin: 0;
     padding: 0;
+}
+
+/* za odmaknit doted borderje v brskalnikih */
+a {
+    outline: none;
+}
+    
+a:active {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+// MAIN NAVBAR
+.navbar-brand {
+    min-height: 73px;
+    padding: 10px 0 10px 15px;
+}
+
+.navbar-default {
+    background-color: $bckColor;
+    box-shadow: 0 0 2px #ccc;
+    border-top: 6px solid $black;
+    border-radius: 0;
+}
+
+.navbar-toggle {
+    margin-top: 19px;
+}
+
+.navbar-nav > li > a {
+    @media (min-width: 768px) {
+        padding-top: 26px;
+        padding-bottom: 28px;
+    }
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    @media (min-width: 768px) {
+        background-color: transparent;
+        margin: -6px 0 -2px;
+        border-bottom: 1px solid $orange;
+        border-top: 6px solid $orange;
+    }
 }
 
 // PLUGIN LIST (in SIDEBAR)
@@ -35,5 +91,82 @@ ul.plg-cat-list {
         @media (min-width: 992px) {
             display: list-item;
         }
+    }
+}
+
+.plugin {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+    color: $white;
+    margin-bottom: 15px;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+        
+        @media (min-width: 768px) {
+            .content-wrap {
+                top: -140px;
+            }
+
+            .plugin-wrap {
+                background-color: $orange;
+            }
+        }
+    }
+
+    @media (min-width: 480px) {
+        float: left;
+        width: 50%;
+    }
+
+    @media (min-width: 768px) {
+        width: 33.3333%;
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 25%;
+    }
+
+    .content-wrap {
+        position: relative;
+        top: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .plugin-wrap {
+        padding: 10px 30px 10px 10px;
+        background-color: $boxBckDark;
+        transition: all 0.3s ease 0s;
+
+        height: 140px;
+        overflow: hidden;
+    }
+
+    .title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        position: relative;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .desc {
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .feat {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 8px;
+        background-color: $orange;
+        padding: 1px 2px 2px;
+        text-transform: uppercase;
     }
 }

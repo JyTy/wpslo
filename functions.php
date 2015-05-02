@@ -1,6 +1,7 @@
 <?php
 // CSS in JS
 function pvz_theme_styles() {
+    wp_enqueue_style( 'googlefont_css', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Lora:400,400italic,700,700italic&subset=latin,latin-ext' );
     wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
 }
