@@ -9,6 +9,11 @@ get_header(); ?>
         <div class="col-md-9">
             <div class="jumbotron">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php
+                        // GET META
+                        $pluginsTitle = get_post_meta( get_the_ID(), 'plugins-title', true );
+                        $pluginsText = get_post_meta( get_the_ID(), 'plugins-text', true );
+                    ?>
 
                     <div class="page-header">   
                         <h1><?php the_title(); ?></h1>
@@ -34,7 +39,10 @@ get_header(); ?>
                 );
                 $query = new WP_Query( $args );
             ?>
-                <h2>Izbor vtičnikov</h2>
+                <div class="grp-desc">
+                    <h2><?=$pluginsTitle?></h2>
+                    <p><?=$pluginsText?></p>
+                </div>
                 <div class="plugin-list">
                     <div class="row">
                         <!-- the loop -->

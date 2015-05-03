@@ -12,7 +12,7 @@ Tags: orange, flat, wordpress, plugins, blog
 body {
   background-color: #FFF;
   font-family: 'Lora', serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #010001; }
 
 h1, h2, h3, h4, h5 {
@@ -37,7 +37,8 @@ blockquote {
 
 /* za odmaknit doted borderje v brskalnikih */
 a {
-  outline: none; }
+  outline: none;
+  text-decoration: underline; }
 
 a:active {
   outline: none; }
@@ -119,6 +120,8 @@ footer {
   box-shadow: 0 0 2px #ccc;
   border-top: 6px solid #010001;
   border-radius: 0; }
+  .navbar-default a {
+    text-decoration: none; }
 
 .navbar-toggle {
   margin-top: 19px; }
@@ -170,7 +173,7 @@ a.scroll-top {
   padding: 1px 4px 1px 5px;
   z-index: 99; }
 
-.plugin-grp .grp-desc {
+.grp-desc {
   margin-bottom: 25px; }
 
 a.plugin {
@@ -241,6 +244,8 @@ a.plugin {
 
 .widget {
   margin-bottom: 60px; }
+  .widget h3 {
+    margin-bottom: 18px; }
   .widget:last-child {
     margin-bottom: 0; }
 
@@ -262,3 +267,7 @@ ul.latest-plugins {
     background-color: #F05A28;
     padding: 1px 2px 2px;
     text-transform: uppercase; }
+
+.cta-widget p {
+  margin-bottom: 25px;
+  text-align: justify; }
