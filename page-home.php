@@ -34,6 +34,7 @@ get_header(); ?>
                 );
                 $query = new WP_Query( $args );
             ?>
+                <h2>Izbor vtičnikov</h2>
                 <div class="plugin-list">
                     <div class="row">
                         <!-- the loop -->

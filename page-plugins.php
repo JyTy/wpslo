@@ -45,7 +45,7 @@ get_header();
             ?>
                     <div id="<?=$taxonomy->slug?>" class="plugin-grp">
                         <div class="grp-desc">
-                            <h2><?=$taxonomy->name?></h2>
+                            <h3><?=$taxonomy->name?></h3>
                             <?=$taxonomy->description?>
                         </div>
             <?php

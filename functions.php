@@ -50,3 +50,24 @@ function pr($array) {
     print_r($array);
     echo "</pre>";
 }
+
+// Define everything about widgets
+require_once( get_template_directory() .'/includes/widgets.php' );
+
+// Custom MCE colors
+function my_mce4_options($init) {
+      $default_colours = '"010001"';
+
+      $custom_colours =  '';
+
+      // build colour grid default+custom colors
+      $init['textcolor_map'] = '['.$default_colours.','.$custom_colours.']';
+
+      // enable 6th row for custom colours in grid
+      $init['textcolor_rows'] = 1;
+
+      $init['block_formats'] = 'Paragraph=p;Header 2=h2;Header 3=h3;Header 4=h4;Header 5=h5';
+
+      return $init;
+}
+add_filter('tiny_mce_before_init', 'my_mce4_options');

@@ -30,7 +30,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Park vojaške zgodovine" width="200" height="52">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Wordpress Slovenija" class="hidden-xs" width="200" height="52">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/logomobile.png" alt="Wordpress Slovenija" class="visible-xs-block" width="52" height="52">
                     </a>
                 </div>
 
