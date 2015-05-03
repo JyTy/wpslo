@@ -28,10 +28,13 @@ function responsiveFlow() {
  
     if(0 < viewportWidth && viewportWidth <= 768){
         jQuery("body").addClass("mobileView").removeClass("tabView").removeClass("desktopView");
+        jQuery(".stickyBar").trigger("sticky_kit:detach");
     }else if(768 < viewportWidth && viewportWidth <= 992){
         jQuery("body").addClass("tabView").removeClass("desktopView").removeClass("mobileView");
+        jQuery(".stickyBar").trigger("sticky_kit:detach");
     }else{
         jQuery("body").addClass("desktopView").removeClass("tabView").removeClass("mobileView");
+        jQuery(".stickyBar").stick_in_parent({parent: jQuery(".container")});
     }
 }
 

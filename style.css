@@ -91,6 +91,9 @@ footer {
     border-bottom: 1px solid #F05A28;
     border-top: 6px solid #F05A28; } }
 
+.container .jumbotron {
+  border-radius: 0; }
+
 .sidebar {
   display: block; }
 
@@ -155,6 +158,16 @@ a.plugin {
   @media (min-width: 1200px) {
     a.plugin {
       width: 25%; } }
+  @media (min-width: 480px) {
+    .homepage a.plugin {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 768px) {
+    .homepage a.plugin {
+      width: 33.3333%; } }
+  @media (min-width: 1200px) {
+    .homepage a.plugin {
+      width: 33.3333%; } }
   a.plugin .content-wrap {
     position: relative;
     top: 0;

@@ -1,8 +1,23 @@
-<?php get_header(); ?>
+<?php
+/* 
+  Template Name: Homepage
+*/
+get_header(); ?>
 
-<div class="container" role="main">
+<div class="container homepage" role="main">
     <div class="row">
         <div class="col-md-9">
+            <div class="jumbotron">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                    <div class="page-header">   
+                        <h1><?php the_title(); ?></h1>
+
+                        <p><?php the_content();?></p>
+                    </div>
+
+                <?php endwhile; endif; ?>
+            </div>
              <?php
                 // Get featured plugins
                 $args = array(
@@ -43,6 +58,9 @@
                         <!-- end of the loop -->
                     </div>
                 </div>
+        </div>
+        <div class="col-md-3">
+            <?php get_sidebar('page'); ?>
         </div>
     </div>
 </div> <!-- END container -->
