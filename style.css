@@ -25,7 +25,8 @@ h1 {
 ul {
   margin: 0;
   padding: 0;
-  margin-left: 15px; }
+  margin-left: 15px;
+  margin-bottom: 15px; }
 
 blockquote {
   padding: 10px 20px;
@@ -53,6 +54,33 @@ a:focus {
   @media (min-width: 992px) {
     .hide-mobile {
       display: block; } }
+
+input.wpcf7-text, textarea {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d3dbdb; }
+  input.wpcf7-text:focus, textarea:focus {
+    box-shadow: 0 0 2px #F05A28; }
+
+input.wpcf7-submit {
+  display: block;
+  border: none;
+  background-color: #8F0500;
+  padding: 10px 35px;
+  color: #F9F9F9;
+  width: 100%;
+  transition: background-color 0.3s ease 0s;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase; }
+  input.wpcf7-submit:hover {
+    background-color: #dc0800; }
+  @media (min-width: 768px) {
+    input.wpcf7-submit {
+      width: auto; } }
+
+textarea {
+  resize: none; }
 
 html, body {
   height: 100%; }
