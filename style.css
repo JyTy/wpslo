@@ -139,7 +139,11 @@ footer {
     border-top: 6px solid #F05A28; } }
 
 .container .jumbotron {
-  border-radius: 0; }
+  border-radius: 0;
+  padding: 15px; }
+  @media (min-width: 768px) {
+    .container .jumbotron {
+      padding: 15px 45px; } }
 
 .sidebar {
   display: block; }
