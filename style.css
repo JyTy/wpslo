@@ -66,7 +66,7 @@ input.wpcf7-text, textarea {
 
 input.wpcf7-submit, .btn-default {
   border: none;
-  background-color: #8F0500;
+  background-color: #64c29c;
   padding: 10px 35px;
   color: #F9F9F9;
   width: 100%;
@@ -76,10 +76,10 @@ input.wpcf7-submit, .btn-default {
   border-radius: 0;
   text-decoration: none; }
   input.wpcf7-submit:hover, .btn-default:hover {
-    background-color: #dc0800;
+    background-color: #3d9c76;
     color: #F9F9F9; }
   input.wpcf7-submit:focus, .btn-default:focus {
-    background-color: #dc0800;
+    background-color: #3d9c76;
     color: #F9F9F9;
     outline: none; }
   @media (min-width: 768px) {
